@@ -1,11 +1,9 @@
 
 # Magic Leap Helio - Hello WebXR (aframe.js)
 
-Hello World, made using a custom version of **[aframe.js v0.9.2](https://github.com/mvilledieu/aframe/tree/magicleap-helio-aframe-support)** adding compatibility to  **aframe ** to the version of the WebXR API used by Helio (Based on chrome m73).
-  
+Hello World, made using a custom version of **[aframe.js v0.9.2](https://github.com/mvilledieu/aframe/tree/magicleap-helio-aframe-support)** adding compatibility to  **aframe** to the version of the WebXR API used by Helio (Based on chrome m73).
 
 ## Try "Hello WebXR" on device:
-  
 
 To try it out on device open [helio](https://www.magicleap.com/experiences/helio) and go to that link:
 
