@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MagicLeap Hello WebXR • A-Frame</title>
+    <meta name="description" content="MagicLeap Hello WebXR • A-Frame">
+    <script>
+      //Fix aframe requestDevice missing from Chrome m77
+      if(
+          navigator.xr && 
+         'requestDevice' in navigator.xr === false
+      ) {
+        navigator.xr.requestDevice = function () {
+          return new Promise(function(resolve, reject){
+            resolve();
+          });
+        };
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/mvilledieu/aframe@d34d95811af5f3fb865d70b888734ffae6544e8c/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-0.2 0.075 -2" rotation="0 45 0" scale="0.15, 0.15, 0.15" color="#4CC3D9" shadow></a-box>
+      <a-sphere position="0 0.125 -2.2" radius="0.125" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="0.2 0.075 -2" radius="0.1" height="0.15" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -2.2" rotation="-90 0 0" width="1" height="1" color="#7BC8A4" shadow></a-plane>
+      <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: [mixin='box']" line="color: #118A7E"></a-entity>
+      <a-entity position="0 1 0" camera look-controls wasd-controls></a-entity>
+    </a-scene>
+  </body>
+</html>
